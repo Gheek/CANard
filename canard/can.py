@@ -70,7 +70,7 @@ class Frame(object):
         # return bytes up to dlc length, pad with zeros
         data_len = min(self.dlc, len(self._data))
         result = self.data[:data_len]
-        result.extended([0] * (8 - data_len))
+        result.extend([0] * (8 - data_len))
         return result
 
     @data.setter
@@ -84,7 +84,7 @@ class Frame(object):
             assert isinstance(byte, int), 'CAN data must consist of bytes'
             assert byte >= 0 and byte <= 0xFF, 'CAN data must consist of bytes'
         # data is valid
-        self._data = value
+        self._data= value
 
     @property
     def frame_type(self):
