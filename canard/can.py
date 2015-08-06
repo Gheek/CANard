@@ -84,7 +84,7 @@ class Frame(object):
             assert isinstance(byte, int), 'CAN data must consist of bytes'
             assert byte >= 0 and byte <= 0xFF, 'CAN data must consist of bytes'
         # data is valid
-        self._data= value
+        self._data = value
 
     @property
     def frame_type(self):
