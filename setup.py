@@ -2,12 +2,12 @@ from distutils.core import setup
 
 setup(
     name='CANard',
-    version='0.2.1',
-    author='Eric Evenchick',
-    author_email='eric@evenchick.com',
+    version='0.2.5',
+    author='Kevin Lamshoeft',
+    author_email='post@lamshoft.de',
     packages=['canard', 'canard.test', 'canard.hw', 'canard.utils', 'canard.proto'],
     scripts=[],
-    url='http://github.com/ericevenchick/CANard',
+    url='https://github.com/Gheek/CANard',
     license='GPLv3',
     description='Library for interacting with Controller Area Network (CAN)',
     long_description=open('README.rst').read(),
