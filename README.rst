@@ -4,6 +4,8 @@ CANard
 
 CANard is a library for dealing with Controller Area Network (CAN) data from
 Python.
+This is a fork which integrates reported bug fixes and pull requests of the base rep and
+intends to be always 'up to date'.
 
 Using a CANtact
 ===============
@@ -18,22 +20,22 @@ requires pySerial, which can be installed with pip::
 Example
 -------
 
-This examples goes on bus and prints received messages:
+This examples goes on comfort bus and prints received messages:
 
 .. code:: python
 
     from canard import can
     from canard.hw import cantact
 
-    dev = cantact.CantactDev("/dev/cu.usbmodem14511")
-
+    dev = cantact.CantactDev("/dev/ttyACM0")
+    dev.set_bitrate(100000)
     dev.start()
     while True:
 	  print(dev.recv())
 
-You will need to set the serial port (``/dev/cu.usbmodem14511`` in this example)
+You will need to set the serial port (``/dev/ttyACM0`` in this example)
 correctly.
-
+Also don't forget to ``chmod 666``.
 
 Using Peak CAN Tools
 ====================
@@ -45,7 +47,7 @@ For kernels 3.6 and newer, skip to step 5.
 
 1. Download the Peak `Linux driver`_.
 
-2. Install dependancies::
+2. Install dependencies::
 
     sudo apt-get install libpopt-dev
 
