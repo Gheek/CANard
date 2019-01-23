@@ -5,7 +5,7 @@ CANard
 CANard is a library for dealing with Controller Area Network (CAN) data from
 Python.
 This is a fork which integrates reported bug fixes and pull requests of the base rep and
-intends to be always 'up to date'.
+intends to be always 'up to date' but apparently isn't.
 
 Using a CANtact
 ===============
